@@ -19,8 +19,8 @@
 
 <main>
     <h2>Comunícate con nosotros</h2>
-    <p>Email: ejemplo@correo.com</p>
-    <p>Teléfono: 999-999-999</p>
+    <p>Email: jordirobles237@gmail.com</p>
+    <p>Teléfono: 927 512 625</p>
 </main>
 
 <footer>

@@ -19,8 +19,8 @@ body {
 
 /* 2. Estilos del Encabezado (Header) y Navegación */
 header {
-    background: #3498db; /* Azul */
-    color: white;
+    background: #12885b;
+    color: rgb(202, 13, 13);
     padding: 1rem 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -45,7 +45,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #2980b9;
+    background-color: #c42a0e;
 }
 
 /* 3. Estilos del Contenido Principal (Main) */
@@ -65,7 +65,7 @@ section {
 }
 
 h1 {
-    color: #3498db;
+    color: #ffffff;
     margin-bottom: 15px;
 }
 

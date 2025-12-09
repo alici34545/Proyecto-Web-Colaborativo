@@ -8,7 +8,7 @@
 <body>
 
 <header>
-    <img src="img/banner.jpg" class="banner">
+    <img src="img/logo.png" width="90" style="margin-left: 20px;">
     <h1>Bienvenidos al Proyecto Web Colaborativo</h1>
 
     <nav>
@@ -20,13 +20,10 @@
 </header>
 
 <main>
-    <h2>Página principal</h2>
+    <h2>Página Principal</h2>
     <p>Este es un proyecto desarrollado de forma colaborativa por estudiantes.</p>
 </main>
 
 <footer>
     <p>© 2025 Proyecto Web</p>
 </footer>
-
-</body>
-</html>
