@@ -11,7 +11,7 @@
 
 <main class="container">
     <div class="card reveal">
-        <h2>Formulario de Registro</h2>
+        <h2>RELLENA DATOS DEL REGIS</h2>
         <?php
 $serverMsg = '';
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
