@@ -122,3 +122,8 @@ footer.site-footer{padding:18px 0;text-align:center;color:var(--muted);margin-to
 /* Theme toggle button */
 .theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff;padding:8px;border-radius:8px;margin-left:8px;cursor:pointer;font-size:16px}
 .theme-toggle:focus{outline:3px solid rgba(18,136,91,0.18)}
+
+.accent-badge1{
+    background-color: #c42a0e;
+    color: #0ea57a;
+}

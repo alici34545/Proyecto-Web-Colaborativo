@@ -15,18 +15,18 @@
         <p>Somos un grupo de estudiantes desarrollando una página web estática como trabajo colaborativo.</p>
 
         <div class="panel-grid reveal">
-            <div class="panel">
-                <span class="accent-badge">Misión</span>
+            <div class="panel" >
+                <span class="accent-badge1">Valores</span>
                 <h3>Aprender juntos</h3>
                 <p>Impulsamos el aprendizaje práctico mediante proyectos reales.</p>
             </div>
             <div class="panel">
-                <span class="accent-badge">Visión</span>
+                <span class="accent-badge">Misión</span>
                 <h3>Mejora continua</h3>
                 <p>Fomentar la mejora de habilidades y colaboración entre compañeros.</p>
             </div>
             <div class="panel">
-                <span class="accent-badge">Valores</span>
+                <span class="accent-badge">Visión</span>
                 <h3>Respeto</h3>
                 <p>Compromiso, respeto y ayuda mutua en el trabajo.</p>
             </div>
