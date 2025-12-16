@@ -2,29 +2,40 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
+<?php include __DIR__ . '/inc/header.php'; ?>
 
-<header>
-    <h1>Sobre Nosotros</h1>
-    <nav>
-        <a href="index.php">Inicio</a>
-        <a href="about.php">Sobre nosotros</a>
-        <a href="contact.php">Contacto</a>
-        <a href="register.php">Registro</a>
-    </nav>
-</header>
+<main class="container">
+    <div class="card reveal">
+        <h2>Quiénes somos</h2>
+        <p>Somos un grupo de estudiantes desarrollando una página web estática como trabajo colaborativo.</p>
 
-<main>
-    <h2>Quiénes somos</h2>
-    <p>Somos un grupo de estudiantes desarrollando una página web estática como trabajo colaborativo.</p>
+        <div class="panel-grid reveal">
+            <div class="panel">
+                <span class="accent-badge">Misión</span>
+                <h3>Aprender juntos</h3>
+                <p>Impulsamos el aprendizaje práctico mediante proyectos reales.</p>
+            </div>
+            <div class="panel">
+                <span class="accent-badge">Visión</span>
+                <h3>Mejora continua</h3>
+                <p>Fomentar la mejora de habilidades y colaboración entre compañeros.</p>
+            </div>
+            <div class="panel">
+                <span class="accent-badge">Valores</span>
+                <h3>Respeto</h3>
+                <p>Compromiso, respeto y ayuda mutua en el trabajo.</p>
+            </div>
+        </div>
+    </div>
 </main>
 
-<footer>
-    <p>© 2025 Proyecto Web</p>
-</footer>
+<?php include __DIR__ . '/inc/footer.php'; ?>
+<script src="js/funciones.js"></script>
 
 </body>
 </html>
