@@ -22,12 +22,12 @@
         <div class="panel-grid reveal" style="margin-top:22px">
             <div class="panel">
                 <span class="accent-badge">Equipo</span>
-                <h3>Colaboración</h3>
+                <h3>Trabajo</h3>
                 <p>Trabajo en equipo, control de versiones y buenas prácticas.</p>
             </div>
             <div class="panel">
                 <span class="accent-badge">Aprende</span>
-                <h3>Tecnologías</h3>
+                <h3>Informatica</h3>
                 <p>HTML, CSS, JavaScript y PHP en un proyecto práctico.</p>
             </div>
             <div class="panel">
