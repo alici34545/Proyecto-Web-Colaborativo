@@ -13,7 +13,11 @@
     <div class="card card-glow reveal">
         <h2>Bienvenidos al Proyecto Web Colaborativo</h2>
         <p class="muted">Este es un proyecto desarrollado de forma colaborativa por estudiantes.</p>
-        <p style="margin-top:16px"><a class="btn btn-primary" href="register.php">Registrarse</a></p>
+        <p style="margin-top:16px">
+            <a class="btn btn-primary" href="register.php">Registrarse</a>
+            <a class="btn btn-ghost" href="about.php" style="margin-left:8px">Acerca</a>
+            <a class="btn btn-ghost" href="contact.php" style="margin-left:8px">Contacto</a>
+        </p>
 
         <div class="panel-grid reveal" style="margin-top:22px">
             <div class="panel">
