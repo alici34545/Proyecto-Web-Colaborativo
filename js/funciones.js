@@ -1,5 +1,5 @@
 /**
- * Archivo: funciones.js
+ Archivo: funciones.js
  * Módulo: Validaciones básicas para el formulario de registro.
  * Desarrollador: alici lopez dionicio(Código implementado por Alici L.D. en la estructura)
  */
@@ -100,4 +100,4 @@ document.addEventListener('DOMContentLoaded', function(){
         // fallback: reveal all
         reveals.forEach(el=>el.classList.add('is-visible'));
     }
-});
+})
