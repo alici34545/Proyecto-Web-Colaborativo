@@ -1,104 +1,125 @@
-/*
- * Archivo: estilos.css
- * Desarrollador: Alici Lopez Dionicio
- */
+/* Archivo: estilos.css
+   Mejoras: variables CSS, header responsivo, botones, formularios y tipografía.
+*/
 
-/* 1. Reset Básico */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+:root{
+    --bg: #f7faf9;
+    --card: #ffffff;
+    --text: #263238;
+    --muted: #606f7b;
+    --accent: #12885b;
+    --accent-2: #1aa67a;
+    --danger: #c42a0e;
+    --max-width: 1000px;
 }
 
-body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+/* Dark theme variables */
+:root[data-theme="dark"]{
+    --bg: #0f1720;
+    --card: #0b1220;
+    --text: #e6eef6;
+    --muted: #9aa9b4;
+    --accent: #16b085;
+    --accent-2: #0ea57a;
+    --danger: #ff7b7b;
 }
 
-/* 2. Estilos del Encabezado (Header) y Navegación */
-header {
-    background: #12885b;
-    color: rgb(202, 13, 13);
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Smooth color transitions for theme changes */
+html{transition:background .18s ease,color .18s ease}
+body *{transition:color .12s ease,background-color .12s ease,border-color .12s ease}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
 }
 
-nav ul {
-    list-style: none;
-    text-align: center;
+.container{max-width:var(--max-width);margin:20px auto;padding:0 16px}
+
+/* Header */
+.site-header{
+    background: linear-gradient(90deg,var(--accent),var(--accent-2));
+    color:#fff;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+.site-header .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 16px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:56px;width:auto;border-radius:6px}
+.brand h1{font-size:1.1rem;margin:0;color:#fff}
+
+nav.main-nav ul{list-style:none;display:flex;gap:12px;margin:0;padding:0}
+nav.main-nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:6px;font-weight:600;transition:background .18s}
+nav.main-nav a:hover{background:rgba(255,255,255,0.08)}
+
+/* Hero / Main */
+main.card{background:var(--card);border-radius:10px;box-shadow:0 6px 24px rgba(37,54,64,0.06);padding:24px;margin-top:18px}
+main.card h2{margin-top:0;color:var(--accent)}
+
+/* Forms */
+form{display:block}
+label{display:block;margin-top:12px;font-weight:600;color:var(--muted)}
+input[type="text"], input[type="email"], input[type="password"], textarea{width:100%;padding:10px;border:1px solid #e2e8f0;border-radius:8px;margin-top:8px}
+.form-actions{margin-top:16px}
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{background:transparent;border:1px solid #e2e8f0;color:var(--text)}
+.error{color:var(--danger);margin-top:8px;font-weight:600}
+
+/* Footer */
+footer.site-footer{padding:18px 0;text-align:center;color:var(--muted);margin-top:18px}
+
+/* Responsive */
+@media (max-width:700px){
+    .site-header .inner{flex-direction:column;align-items:flex-start}
+    nav.main-nav ul{flex-direction:column;width:100%}
+    nav.main-nav a{display:block;width:100%}
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+/* Small utilities */
+.muted{color:var(--muted)}
+
+/* ===== Animaciones y Paneles ===== */
+@keyframes floatUp {
+    from{transform:translateY(16px);opacity:0}
+    to{transform:translateY(0);opacity:1}
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+.reveal{opacity:0;transform:translateY(12px);transition:transform .5s ease, opacity .5s ease}
+.reveal.is-visible{opacity:1;transform:none}
 
-nav ul li a:hover {
-    background-color: #c42a0e;
-}
+.panel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.9),var(--card));border-radius:12px;padding:18px;box-shadow:0 8px 30px rgba(16,24,40,0.06);transition:transform .25s ease, box-shadow .25s ease;border:1px solid rgba(16,24,40,0.03)}
+.panel h3{margin:0 0 8px 0;color:var(--accent)}
+.panel p{color:var(--muted);margin:0}
+.panel:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(16,24,40,0.08)}
 
-/* 3. Estilos del Contenido Principal (Main) */
-main {
-    padding: 20px;
-    max-width: 1000px;
-    margin: 20px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
+.panel .accent-badge{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700;font-size:.85rem}
 
-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    border-bottom: 1px solid #eee;
-}
+/* Glow effect for important cards */
+.card-glow{position:relative;overflow:hidden}
+.card-glow:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0.06),rgba(255,255,255,0));pointer-events:none;mix-blend-mode:screen}
 
-h1 {
-    color: #ffffff;
-    margin-bottom: 15px;
-}
+/* Button micro-interactions */
+.btn{transition:transform .12s ease,box-shadow .12s ease}
+.btn:active{transform:translateY(1px)}
+.btn-primary:hover{box-shadow:0 10px 30px rgba(18,136,91,0.18)}
 
-/* 4. Estilos de Formularios (contact.php y registro.php) */
-form label {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-}
+/* Responsive panels */
+@media (max-width:900px){.panel-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.panel-grid{grid-template-columns:1fr}}
 
-form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
+/* Menu hamburguesa */
+.menu-toggle{display:none;background:transparent;border:none;color:#fff;font-size:18px;padding:8px}
+@media (max-width:700px){.menu-toggle{display:inline-block}}
+.main-nav.collapsed{display:none}
+.main-nav.collapsed.open{display:block}
 
-form button[type="submit"] {
-    background-color: #2ecc71; /* Verde */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 15px;
-}
+/* Theme toggle button */
+.theme-toggle{background:transparent;border:1px solid rgba(255,255,255,0.08);color:#fff;padding:8px;border-radius:8px;margin-left:8px;cursor:pointer;font-size:16px}
+.theme-toggle:focus{outline:3px solid rgba(18,136,91,0.18)}
 
-/* 5. Estilos del Pie de Página (Footer) */
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: white;
-    margin-top: 20px;
-}
